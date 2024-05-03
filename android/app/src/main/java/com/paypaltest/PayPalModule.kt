@@ -31,17 +31,17 @@ class PayPalModule(reactContext: ReactApplicationContext) : ReactContextBaseJava
                 override fun onPayPalWebSuccess(result: PayPalWebCheckoutResult) {
                     // order was approved and is ready to be captured/authorized (see step 7)
                     Log.d("PAYMENT", "SUCCESSFUL")
-                    promiseCallback.resolve("Payment Successful Android")
+                    promiseCallback.resolve("Payment Successful - Android")
                 }
                 override fun onPayPalWebFailure(error: PayPalSDKError) {
                     // handle the error
                     Log.d("ERROR ", error.message.toString())
-                    promiseCallback.reject("Error", "Payment Failed Android")
+                    promiseCallback.reject("Error", "Payment Failed - Android")
                 }
                 override fun onPayPalWebCanceled() {
                     // the user canceled the flow
                     Log.d("PAYMENT", "CANCELED")
-                    promiseCallback.reject("Error", "Payment Cancelled Android")
+                    promiseCallback.reject("Error", "Payment Cancelled - Android")
                 }
             }
             val payPalWebCheckoutRequest = PayPalWebCheckoutRequest(orderId, fundingSource = PayPalWebCheckoutFundingSource.PAYPAL)

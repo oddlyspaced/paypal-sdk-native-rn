@@ -9,5 +9,5 @@
 #import <React/RCTLog.h>
 
 @interface RCT_EXTERN_MODULE(PayPalNativeModule, NSObject)
-RCT_EXTERN_METHOD(testPayment: (RCTPromiseResolveBlock) resolve reject: (RCTPromiseRejectBlock) reject);
+RCT_EXTERN_METHOD(testPayment: (nonnull NSString *)orderId resolve: (RCTPromiseResolveBlock) resolve reject: (RCTPromiseRejectBlock) reject);
 @end
