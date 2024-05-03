@@ -8,12 +8,6 @@
 #import "RCTPayPalModule.h"
 #import <React/RCTLog.h>
 
-@implementation RCTPayPalModule
-
-RCT_EXPORT_MODULE(PayPalModule);
-RCT_EXPORT_METHOD(createCalendarEvent:(NSString *)name location:(NSString *)location)
-{
-  RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
-}
-
+@interface RCT_EXTERN_MODULE(PayPalNativeModule, NSObject)
+RCT_EXTERN_METHOD(dummyLog: (RCTPromiseResolveBlock) resolve reject: (RCTPromiseRejectBlock) reject);
 @end

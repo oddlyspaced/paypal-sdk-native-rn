@@ -19,10 +19,7 @@ const App = () => {
 			<Button
 				onPress={() => {
 					console.log('Js');
-					PayPalModule.createCalendarEvent(
-						'testName',
-						'testLocation',
-					);
+					PayPalModule.dummyLog();
 				}}
 				title='Test'
 			/>

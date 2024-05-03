@@ -1,4 +1,4 @@
 import { NativeModules } from 'react-native';
-const { PayPalModule } = NativeModules;
+const { PayPalNativeModule } = NativeModules;
 
-export default PayPalModule;
+export default PayPalNativeModule;
