@@ -102,6 +102,10 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {

@@ -15,12 +15,12 @@ const App = () => {
 					textAlign: 'center',
 				}}
 			>
-				PayPal JS Sdk Test
+				PayPal Native Sdk Test
 			</Text>
 			<Button
 				onPress={() => {
 					console.log('Js');
-					PayPalModule.testPayment()
+					PayPalModule.testPayment("1V2947439L7101345")
 						.then((res) => {
 							console.log('RESULT : ' + JSON.stringify(res));
 							setPaymentResp(res);
