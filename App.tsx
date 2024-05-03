@@ -1,4 +1,5 @@
-import { SafeAreaView, Text, View } from 'react-native';
+import { Button, SafeAreaView, Text, View } from 'react-native';
+import PayPalModule from './ios/src/paypalNativeModule';
 
 const App = () => {
 	return (
@@ -15,6 +16,16 @@ const App = () => {
 			>
 				PayPal JS Sdk Test
 			</Text>
+			<Button
+				onPress={() => {
+					console.log('Js');
+					PayPalModule.createCalendarEvent(
+						'testName',
+						'testLocation',
+					);
+				}}
+				title='Test'
+			/>
 		</SafeAreaView>
 	);
 };
