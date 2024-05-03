@@ -1,4 +1,8 @@
 import { NativeModules } from 'react-native';
 const { PayPalNativeModule } = NativeModules;
 
-export default PayPalNativeModule;
+interface IPayPalNativeModule {
+    testPayment(): Promise<any>;
+}
+
+export default PayPalNativeModule as IPayPalNativeModule;
